@@ -1,38 +1,405 @@
-.App {
+#root, body, html {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-image: url('./assets/windows_desktop.jpg');
+  background-repeat: no-repeat;
+  background-color: gray;
+}
+
+
+/* TextDocumentUI Page */
+.text-document-container {
+  position: absolute;
+  width: 40%;
+  height: 63px;
+  left: 45%;
+  top: 80px;
+  background-color: white;
+  border-bottom: 1px solid gray;
+}
+
+
+/* TextDocumentHeader Component */
+.file-header {
+  display: inline-flex;
+  align-items: center;
+  line-height: 4px;
+  margin-left: 6px;
+  float: left;
+  clear: none;
+}
+
+.file-header p {
+  margin-left: 10px;
+}
+
+.file-header:hover {
+  cursor: default;
+}
+
+
+/* HeaderIcons Component */
+.header-icons {
+  float: right;
+  margin-top: 8px;
+}
+
+.minus-icon, .maximize-icon {
+  margin-right: 15px;
+}
+
+.close-icon {
+  margin-right: 10px
+}
+
+.minus-icon:hover, .maximize-icon:hover {
+  background-color: rgb(165, 165, 165);
+}
+
+.close-icon:hover {
+  background-color: rgb(251, 58, 58);
+}
+
+
+/* TextDocumentOptions Component */
+.file-option-headers {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  left: 0px;
+  line-height: 0px;
+}
+
+.file-options {
+  display: inline-flex;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.file-options:hover {
+  background-color: rgb(140, 195, 243);
+  cursor: default;
+}
+
+
+/* TextDocumentDescription Component */
+.text-document-description-container {
+  width: 40%;
+  height: 200px;
+  background-color: white;
+  display: inline-flex;
+  position: relative;
+  overflow: scroll;
+  top: 144px;
+  left: 45%;
+}
+
+.text-document-description-container p {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+
+/* DesktopFolderIcon Component */
+.desktop-icon {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  min-width: 6%;
+  max-width: 6%;
+  padding-bottom: 0px;
+  user-select: none;
+  word-wrap: break-word;
+}
+
+.desktop-icon:hover {
+  cursor: default;
+  background-color: rgb(176, 249, 249, 0.2);
+}
+
+.about-me-file-position {
+  margin-left: 500px;
+  top: 0;
+}
+
+.contact-info-file-position {
+  margin-left: 600px;
+  top: 0;
+}
+
+.eatsafe-folder-position {
+  position: relative;
+  top: 100px;
+}
+
+.stomp-the-world-folder-position {
+  position: relative;
+  top: 200px;
+}
+
+.hangman-folder-position {
+  position: relative;
+  top: 310px;
+}
+
+.chat-app-folder-position {
+  position: relative;
+  top: 0px;
+  margin-left: 100px;
+}
+
+.linkedin-icon {
+  left: 500px;
+  top: 475px;
+}
+
+.github-icon {
+  left: 600px;
+  top: 475px;
+}
+
+
+/* Folder Page */
+.folder-container {
+  position: absolute;
+  width: 50%;
+  height: 75px;
+  background-color: black;
+  cursor: default;
+}
+
+.folder-position {
+  left: 10%;
+  top: 10%;
+}
+
+
+/* FolderOptions Component */
+.folder-option-headers {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  left: 0px;
+}
+
+.folder-options {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.folder-options:hover {
+  background-color: rgb(147, 147, 147);
+}
+
+
+/* FolderNavBar Component */
+.folder-nav-bar {
+  position: relative;
+  width: 100%;
+  background-color: rgb(41, 41, 41);
+  top: -14px;
+  padding-bottom: 3px;
+  padding-top: 7px;
+}
+
+.nav-back-arrow {
+  margin-left: 15px;
+}
+
+.nav-forward-arrow {
+  margin-left: 20px;
+}
+
+.nav-back-arrow:hover, .nav-forward-arrow:hover {
+  color: rgb(88, 136, 255);
+}
+
+.nav-bar-folder-path {
+  border: 1px solid gray;
+  width: 55%;
+  height: 25px;
+  display: inline-flex;
+  margin-left: 3%;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.nav-bar-folder-path p {
+  display: inline-block;
+  height: 15px;
+}
+
+.path-folder-icon {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.nav-bar-folder-path p {
+  position: relative;
+  margin-left: 5px;
+  top: -8px;
+}
+
+.path-arrow {
+  margin-top: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.folder-search-box {
+  border: 1px solid gray;
+  outline: none;
+  background-color: rgb(41, 41, 41);
+  color: white;
+  width: 26%;
+  height: 24px;
+  display: inline-flex;
+  margin-right: 2%;
+  margin-left: 2%;
+  position: relative;
+  top: -4px;
+}
+
+
+/* FolderDataContainer Component */
+.folder-data-container {
+  background-color: rgb(41, 41, 41);
+  height: 300px;
+  position: relative;
+  top: -14px;
+  overflow: auto;
+  user-select: none;
+}
+
+.sorting-headers {
+  display: inline-flex;
+  position: relative;
+  font-size: 14px;
+  width: 100%;
+  top: -15px;
+}
+
+.folder-header-name {
+  padding-left: 20px;
+  padding-right: 150px;
+}
+
+.folder-header-date {
+  padding-right: 100px;
+}
+
+.folder-header-type {
+  padding-right: 75px;
+}
+
+.folder-header-size {
+  padding-right: 50px;
+}
+
+.folder-header-date, .folder-header-type, .folder-header-size {
+  padding-left: 8px;
+  margin-left: 2px;
+}
+
+.folder-header-name, .folder-header-date, .folder-header-type, .folder-header-size {
+  border-right: 1px solid gray;
+  height: 20px;
+  padding-top: 5px;
+}
+
+.folder-header-name:hover, .folder-header-date:hover, .folder-header-type:hover, .folder-header-size:hover {
+  background-color: gray;
+}
+
+.project-name {
+  position: relative;
+  display: inline-flex;
+  font-size: 14px;
+  margin-left: 15px;
+  top: -30px;
+  width: 91%;
+  text-overflow: hidden;
+  max-height: 40px;
+}
+
+.project-name:hover {
+  background-color: gray;
+}
+
+.file-name {
+  position: relative;
+  top: 5px;
+  width: 35%;
+}
+
+.file-date {
+  width: 33%;
+}
+.file-type {
+  width: 19%;
+}
+
+
+
+/* Reusable styles */
+.text-font-14px {
+  font-size: 14px;
+}
+
+.text-color-white {
+  color: rgb(230, 230, 230);
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.bg-color-gray {
+  background-color: rgb(100, 100, 100);
+}
+
+.hover-bg-color-gray:hover {
+  background-color: gray;
+}
+
+.cursor-default {
+  cursor: default
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+
+/* Removes default button styling */
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+}
+
+/* Centers placeholder text of input tag */
+::-webkit-input-placeholder {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Text Decoration */
+
+.text-decoration-none {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Removes hyperlink color */
+a {
+  color: inherit;
 }
