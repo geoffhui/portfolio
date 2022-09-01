@@ -140,15 +140,9 @@
   top: 200px;
 }
 
-.hangman-folder-position {
+.reactjs-online-store-folder-position {
   position: relative;
   top: 310px;
-}
-
-.chat-app-folder-position {
-  position: relative;
-  top: 0px;
-  margin-left: 100px;
 }
 
 .linkedin-icon {

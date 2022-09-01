@@ -4,7 +4,7 @@ import DesktopFolderIcon from './components/DesktopFolderIcon';
 import DesktopTextDocumentIcon from './components/DesktopTextDocumentIcon';
 import Folder from './pages/Folder';
 import TextDocumentUI from './pages/TextDocumentUI'
-import { projectData, taskTrackerPath, eatsafePath, stompTheWorldPath, hangmanPath, chatAppPath, aboutMeDescription } from "./functions/data";
+import { projectData, taskTrackerPath, eatsafePath, stompTheWorldPath, reactjsOnlineStorePath, aboutMeDescription } from "./functions/data";
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function App() {
@@ -12,8 +12,7 @@ function App() {
   const [toggleTaskTracker, setToggleTaskTracker] = useState(false)
   const [toggleEatsafe, setToggleEatsafe] = useState(false)
   const [toggleStompTheWorld, setToggleStompTheWorld] = useState(false)
-  const [toggleHangman, setToggleHangman] = useState(false)
-  const [toggleChatApp, setToggleChatApp] = useState(false)
+  const [toggleReactJSOnlineStore, setToggleReactJSOnlineStore] = useState(false)
 
   // PARAM fileToggle: a function that sets the state of a specific data
   const handleClick = (e, fileToggle) => {
@@ -38,11 +37,8 @@ function App() {
       case 'stomp-the-world':
         setToggleStompTheWorld(false)
         break
-      case 'hangman':
-        setToggleHangman(false)
-        break
-      case 'chat-app':
-        setToggleChatApp(false)
+      case 'reactjs-online-store':
+        setToggleReactJSOnlineStore(false)
         break
     }
   }
@@ -65,12 +61,8 @@ function App() {
         <DesktopFolderIcon folderName="Stomp The World" />
       </div>
       
-      <div className='hangman-folder-position' onClick={(e) => handleClick(e, setToggleHangman)}>
-        <DesktopFolderIcon folderName="Hangman" />
-      </div>
-
-      <div className='chat-app-folder-position' onClick={(e) => handleClick(e, setToggleChatApp)}>
-        <DesktopFolderIcon folderName="Chat App" />
+      <div className='reactjs-online-store-folder-position' onClick={(e) => handleClick(e, setToggleReactJSOnlineStore)}>
+        <DesktopFolderIcon folderName="ReactJS Online Store" />
       </div>
 
 
@@ -134,24 +126,13 @@ function App() {
         : null
       }
 
-      {toggleHangman ?
+      {toggleReactJSOnlineStore ?
         <Folder
-          folderName="Hangman"
+          folderName="ReactJS Online Store"
           onClose={onClose}
-          context="hangman"
-          chrome={projectData["hangman"]["chrome"]}
-          path={hangmanPath}
-        /> 
-        : null
-      }
-
-      {toggleChatApp ?
-        <Folder
-          folderName="Chat App"
-          onClose={onClose}
-          context="chat-app"
-          chrome={projectData["chat-app"]["chrome"]}
-          path={chatAppPath}
+          context="reactjs-online-store"
+          chrome={projectData["reactjs-online-store"]["chrome"]}
+          path={reactjsOnlineStorePath}
         /> 
         : null
       }

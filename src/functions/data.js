@@ -30,21 +30,12 @@ export var projectData = {
          size: '25 Kb'
       }
    },
-   "hangman": {
+   "reactjs-online-store": {
       chrome: {
-         name: 'Hangman',
+         name: 'ReactJS Online Store',
          date: '2019-04-07 1:00 PM',
          type: 'Chrome',
          size: '4 Kb'
-      }
-   },
-
-   "chat-app": {
-      chrome: {
-         name: 'Chat App',
-         date: '2020-11-26 9:25 PM',
-         type: 'Chrome',
-         size: '7 Kb'
       }
    },
 }
@@ -52,8 +43,7 @@ export var projectData = {
 export var taskTrackerPath = ['This PC', 'OS (C:)', 'Task Tracker']
 export var eatsafePath = ['This PC', 'OS (C:)', 'Eatsafe']
 export var stompTheWorldPath = ['This PC', 'OS (C:)', 'Stomp The World']
-export var hangmanPath = ['This PC', 'OS (C:)', 'Hangman']
-export var chatAppPath = ['This PC', 'OS (C:)', 'Chat App']
+export var reactjsOnlineStorePath = ['This PC', 'OS (C:)', 'ReactJS Online Store']
 
 export var linkedinUrl = 'https://www.linkedin.com/in/geoff-hui/'
 export var githubUrl = 'https://github.com/geoffhui'

@@ -18,12 +18,8 @@ const FolderDataContainer = ({ folderName, chrome }) => {
          setUrl("https://github.com/geoffhui/task-tracker")
       }
 
-      if (folderName === "Hangman") {
-         setUrl("https://github.com/geoffhui/hangman")
-      }
-
-      if (folderName === "Chat App") {
-         setUrl("https://github.com/geoffhui/chatapp")
+      if (folderName === "ReactJS Online Store") {
+         setUrl("https://github.com/geoffhui/reactjs-online-store")
       }
    }, [folderName])
 
